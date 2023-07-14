@@ -13,16 +13,13 @@ let newLib = []
 
 // book constructor
 function Book(author, title, pages, read){
-  this.author = author.value;
-  this.title = title.value;
-  this.pages = pages.value;
-  this.read = read.value;
+  return{author: author.value, title: title.value, pages: pages.value, read: read.value}
 };
 
-const newBk = new Book(author, title, pages, read);
 
 function addBookToLibrary(event){
   event.preventDefault();
+  const newBk =  Book(author, title, pages, read);
   form.style.display = 'none';
   newLib.push(newBk)
   form.reset();
